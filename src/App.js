@@ -7,18 +7,18 @@ import Info from './Components/Info';
 import Footer from './Components/Footer'
 
 
-const skillPhotos=[
-  { image1:'images//about.jpg'},
-   {image2:'images//about1.jpg'},
-   { image3:'images//about.jpg'},
-   {image4:'images//about1.jpg'},
-   { image5:'images//about.jpg'},
-   {image6:'images//about1.jpg'},
-   { image7:'images//about.jpg'},
-   {image8:'images//about1.jpg'}
- ]
+// const skillPhotos=[
+//   { image1:'images//about.jpg'},
+//    {image2:'images//about1.jpg'},
+//    { image3:'images//about.jpg'},
+//    {image4:'images//about1.jpg'},
+//    { image5:'images//about.jpg'},
+//    {image6:'images//about1.jpg'},
+//    { image7:'images//about.jpg'},
+//    {image8:'images//about1.jpg'}
+//  ]
 
-const carousel=skillPhotos.map(n=>n)
+// const carousel=skillPhotos.map(n=>n)
 
 
 const App = () => {

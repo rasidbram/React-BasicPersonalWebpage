@@ -12,6 +12,7 @@ const skill = (props) => {
             <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item">
+                        {/* do it better below line */}
                         <img className="d-block w-30 m-auto" src={props.carousel} style={{ height: '280px' }} alt="" />
                     </div>
                 </div>
