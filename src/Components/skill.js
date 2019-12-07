@@ -1,31 +1,45 @@
 import React from 'react';
 import { headTag } from './Info';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
 
-
-//   console.log(carousel) 
-
+const skillPhotos = [
+    { url: 'images/about1.jpg' },
+    { url: 'images/about.jpg' },
+    {url:'images/experience.jpg'},
+    {url:'images/experience1.jpg'},
+    {url:'images/universty.jpg'},
+    {url:'images/universty1.jpg'}
+  
+  ]
 const skill = (props) => {
-    console.log(props)
+    
+    const settings = {
+        className: "slides",
+        infinite: true,
+        speed: 500,
+        dots:true,
+        fade:true,
+        slidesToShow:1,
+        arrows:true,
+        slidesToScroll:1,
+        
+      };
+
     return (
         <div>
             <h3 style={headTag}>{props.title}</h3>
-            <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item">
-                        {/* do it better below line */}
-                        <img className="d-block w-30 m-auto" src={props.carousel} style={{ height: '280px' }} alt="" />
-                    </div>
-                </div>
-                <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
-
+            <Slider {...settings} style={{margin:'35px auto 55px'}}>
+        {skillPhotos.map((n)=>{
+          return(
+            <div>
+              <img style={{width:'470px',height:'330',margin:'auto',borderRadius:'7px'}} src={n.url}/>
             </div>
+          )
+        })}
+        </Slider>
+        <hr/>
         </div>
 
     );
